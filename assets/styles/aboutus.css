@@ -1,4 +1,12 @@
 /* Общие стили */
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/static/Montserrat-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +14,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: #333;
