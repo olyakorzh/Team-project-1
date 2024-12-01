@@ -17,8 +17,8 @@ body {
   font-family: Montserrat, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+  color: #7a7a7a;
+  background-color: white;
 }
 
 .container {
@@ -30,7 +30,7 @@ body {
 /* Шапка */
 .header {
   width: 100%;
-  background-color: #fff;
+  background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 10px 20px; /* Отступы для адаптивности */
 }
@@ -74,7 +74,7 @@ body {
 
 .menu__link {
   text-decoration: none;
-  color: #333;
+  color: #7a7a7a;
   font-weight: 500;
   font-size: 16px;
   transition: color 0.3s ease;
@@ -101,7 +101,7 @@ body {
 /* Стили для пунктов */
 .header__language-item {
   font-size: 16px;
-  color: #333;
+  color: #7a7a7a;
   cursor: pointer;
   transition: color 0.3s ease;
 }
@@ -127,7 +127,7 @@ body {
   justify-content: center;
   padding: 10px 20px;
   background-color: #52bfff;
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
@@ -156,21 +156,23 @@ body {
 
 /* Общие стили хлебных крошек (navigation-path) */
 .navigation-path {
-  background-color: #fff;
-  padding: 10px 20px;
+  background-color: white;
+  padding: 10px 0;
   font-size: 14px;
-  color: #666;
+  color: #7a7a7a;
 }
 
 .navigation-path__container {
   display: flex;
   align-items: center;
   gap: 5px;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 .navigation-path__link {
   text-decoration: none;
-  color: #666;
+  color: #7a7a7a;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -193,38 +195,85 @@ body {
 }
 
 .navigation-path__current {
-  color: #333;
+  color: #7a7a7a;
   font-weight: bold;
 }
 
 /* О нас */
-.about {
+.hero {
+  padding: 50px 0;
+  background-color: white;
+}
+
+.hero__container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.hero__header {
   text-align: center;
-  padding: 50px 20px;
-  background-color: #fff;
+  margin-bottom: 40px; /* Отступ между заголовком и контентом */
 }
 
-.about__title {
-  font-size: 32px;
-  margin-bottom: 20px;
+.hero__title {
+  font-size: 36px;
   color: #52bfff;
+  text-align: center;
+  line-height: 1.28;
 }
 
-.about__text {
-  margin-bottom: 30px;
-  color: #555;
+/* Изображения */
+.hero__image-wrapper {
+  width: 560px;
+  height: 430px;
+  position: relative;
+  flex-shrink: 0;
 }
 
-.about__image img {
-  max-width: 100%;
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero__image--overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Текст */
+.hero__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero__text {
+  width: 560px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__description {
+  font-size: 14px;
+  line-height: 1.43;
+  color: #7a7a7a; /* Основной текстовый цвет */
 }
 
 /* Услуги */
 .services {
   padding: 50px 20px;
-  background-color: #f9f9f9;
+  background-color: white;
   text-align: center;
 }
 
@@ -237,7 +286,7 @@ body {
 .services__subtitle {
   margin-bottom: 40px;
   font-size: 18px;
-  color: #666;
+  color: #7a7a7a;
 }
 
 .services__list {
@@ -247,7 +296,7 @@ body {
 }
 
 .services__item {
-  background-color: #fff;
+  background-color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -266,13 +315,13 @@ body {
 
 .services__text {
   font-size: 16px;
-  color: #333;
+  color: #7a7a7a;
 }
 
 /* Контактный блок */
 .contact {
   padding: 50px 20px;
-  background-color: #fff;
+  background-color: white;
   text-align: center;
 }
 
@@ -306,7 +355,7 @@ body {
 .contact__button {
   padding: 10px;
   background-color: #52bfff;
-  color: #fff;
+  color: white;
   font-size: 16px;
   border: none;
   border-radius: 4px;
@@ -320,8 +369,8 @@ body {
 
 /* Подвал */
 .footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #7a7a7a;
+  color: white;
   padding: 20px 0;
   text-align: center;
   font-size: 14px;
@@ -352,5 +401,25 @@ body {
 
   .menu__link {
     font-size: 14px; /* Уменьшаем размер текста в меню */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__content {
+    flex-direction: column; /* Переводим текст и изображение в столбик */
+  }
+
+  .hero__text,
+  .hero__image-wrapper {
+    width: 100%; /* Увеличиваем ширину до 100% */
+    height: auto;
+  }
+
+  .hero__title {
+    font-size: 28px; /* Уменьшаем размер заголовка */
+  }
+
+  .hero__description {
+    font-size: 14px;
   }
 }
