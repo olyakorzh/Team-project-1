@@ -83,13 +83,3 @@
   .header__button:hover {
     background-color: #0056b3;
   }
-  .breadcrumbs {
-    background-color: #f1f1f1;
-    padding: 10px 0;
-    font-size: 14px;
-    color: #666;
-  }
-  
-  .breadcrumbs__container {
-    text-align: left;
-  }
