@@ -86,39 +86,39 @@ body {
 
 /* Стили для контейнера переключателя языков */
 .header__language {
-  margin-left: 20px; 
+  margin-left: 20px;
 }
 
 /* Список языков */
 .header__language-list {
-  display: flex; 
-  gap: 10px; 
-  list-style: none; 
-  padding: 0; 
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
 /* Стили для пунктов */
 .header__language-item {
   font-size: 16px;
-  color: #333; 
-  cursor: pointer; 
-  transition: color 0.3s ease; 
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 /* Активный язык */
 .header__language-item--active {
-  color: #52bfff; 
+  color: #52bfff;
 }
 
 /* Ховер-эффект */
 .header__language-item:hover {
-  color: #52bfff; 
+  color: #52bfff;
 }
 
 /* Кнопка */
 .header__actions {
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 .header__button {
@@ -154,16 +154,47 @@ body {
   transform: scale(1.05);
 }
 
-/* Хлебные крошки */
-.breadcrumbs {
-  background-color: #f1f1f1;
-  padding: 10px 0;
+/* Общие стили хлебных крошек (navigation-path) */
+.navigation-path {
+  background-color: #fff;
+  padding: 10px 20px;
   font-size: 14px;
   color: #666;
 }
 
-.breadcrumbs__container {
-  text-align: left;
+.navigation-path__container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navigation-path__link {
+  text-decoration: none;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.navigation-path__link:hover {
+  color: #52bfff;
+}
+
+.navigation-path__icon {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.navigation-path__separator {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.navigation-path__current {
+  color: #333;
+  font-weight: bold;
 }
 
 /* О нас */
