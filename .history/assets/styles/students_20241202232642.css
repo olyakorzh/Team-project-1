@@ -109,9 +109,4 @@
   }
   .block1{
     display: grid;
-    align-items: center;
-  }
-  .block2{
-    display: grid;
-    align-content: center;
   }

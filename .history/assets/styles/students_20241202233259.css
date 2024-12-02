@@ -110,8 +110,9 @@
   .block1{
     display: grid;
     align-items: center;
+    justify-content: start;
   }
   .block2{
     display: grid;
-    align-content: center;
+    align-items: center;
   }

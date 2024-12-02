@@ -108,8 +108,8 @@
     grid-column-end: span 2;
   }
   .block1{
-    display: grid;
     align-items: center;
+    text-align: left;
   }
   .block2{
     display: grid;

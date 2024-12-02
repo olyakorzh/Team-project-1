@@ -113,5 +113,5 @@
   }
   .block2{
     display: grid;
-    align-content: center;
+    align-items: center;
   }

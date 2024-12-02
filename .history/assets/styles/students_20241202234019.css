@@ -95,7 +95,7 @@
   }
   .containerstudent{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr min-content;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 5px 5px;
     justify-items: center;
@@ -113,5 +113,5 @@
   }
   .block2{
     display: grid;
-    align-content: center;
+    align-items: center;
   }

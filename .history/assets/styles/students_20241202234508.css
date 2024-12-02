@@ -112,6 +112,6 @@
     align-items: center;
   }
   .block2{
-    display: grid;
+    display: flex;
     align-content: center;
   }
