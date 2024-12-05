@@ -581,17 +581,221 @@ body {
   width: 200px;
 }
 
+/* Секция "Остались вопросы" */
+.questions {
+  position: relative;
+  padding: 50px 20px;
+  background: url("../img/questions_map.svg") center no-repeat; /* Фон карты */
+  background-size: cover;
+  overflow: hidden;
+}
+
+.questions__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Заголовки */
+.questions__header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.questions__title {
+  font-size: 32px;
+  color: #52bfff;
+}
+
+.questions__subtitle {
+  font-size: 18px;
+  color: #7a7a7a;
+}
+
+/* Контент секции */
+.questions__content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Форма */
+.questions__form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: left;
+}
+
+.questions__info {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.questions__item {
+  margin-bottom: 15px;
+}
+
+.questions__item strong {
+  display: block;
+  font-size: 16px;
+  color: #52bfff;
+  margin-bottom: 5px;
+}
+
+.questions__item p {
+  font-size: 14px;
+  color: #7a7a7a;
+}
+
+.questions__button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #52bfff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.questions__button:hover {
+  background-color: #0056b3;
+}
+
+/* Изображения */
+.questions__tree {
+  position: absolute;
+  left: 10%;
+  bottom: 20px;
+  max-width: 150px;
+  z-index: 1;
+}
+
+.questions__bus {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  max-width: 250px;
+  z-index: 1;
+}
+
+/* Верхняя размытость */
+.questions::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url("../img/aboutus.img/quest_map.svg") top center no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
 /* Подвал */
 .footer {
-  background-color: #7a7a7a;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
+  position: relative;
+  background-color: white;
+  padding: 30px 0;
+}
+
+.footer__container {
+  max-width: 1200px; /* Ширина ограничивается */
+  margin: 0 auto; /* Центрирование контейнера */
+  padding: 0 20px; /* Отступы по бокам */
+}
+
+.footer__top,
+.footer__bottom {
+  display: flex;
+  justify-content: stretch;
+
+  padding: 0; /* Убираем лишние внутренние отступы */
+  min-height: 50px;
+}
+
+.footer__top {
+  align-items: baseline; /* Верхний этаж по базовой линии */
+}
+
+.footer__bottom {
+  align-items: baseline; /* Нижний этаж по центру */
+}
+
+.footer__menu {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__menu-item a {
+  text-decoration: none;
+  color: #7a7a7a;
   font-size: 14px;
 }
 
-.footer__text {
-  margin: 0;
+.footer__menu-item a:hover {
+  color: #52bfff;
+}
+
+.footer__social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer__social-link img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.footer__social-link img:hover {
+  transform: scale(1.1);
+}
+
+.footer__content {
+  display: flex;
+  gap: 40px; /* Расстояние между логотипом и контактной информацией */
+  align-items: center; /* Вертикальное выравнивание логотипа и текста */
+}
+
+.footer__contact-list {
+  display: flex;
+  flex-direction: row; /* Горизонтальное выравнивание списка */
+  gap: 20px; /* Расстояние между элементами */
+  list-style: none;
+}
+
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer__city {
+  color: #313131;
+  font-weight: bold;
+}
+
+.footer__address {
+  color: #7a7a7a;
 }
 
 /* Адаптация */
@@ -690,5 +894,27 @@ body {
 
   .contact__pencil {
     display: none; /* Убираем карандаш для упрощения */
+  }
+  .footer__top,
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer__menu {
+    flex-wrap: wrap; /* Перестроить меню в несколько строк */
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .footer__content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .footer__contact-list {
+    padding-left: 0; /* Убрать отступ на мобильных */
   }
 }
