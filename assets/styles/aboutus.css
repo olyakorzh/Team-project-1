@@ -45,13 +45,11 @@ body {
   margin: 0 auto;
 }
 
-/* Логотип */
 .header__logo img {
-  max-height: 54px; /* Высота логотипа */
+  max-height: 54px;
   width: auto;
 }
 
-/* Соцсети */
 .header__media-list {
   display: flex;
   gap: 15px;
@@ -65,7 +63,6 @@ body {
   height: 24px;
 }
 
-/* Навигация */
 .header__nav .menu {
   display: flex;
   gap: 20px;
@@ -86,12 +83,10 @@ body {
   color: #52bfff;
 }
 
-/* Стили для контейнера переключателя языков */
 .header__language {
   margin-left: 20px;
 }
 
-/* Список языков */
 .header__language-list {
   display: flex;
   gap: 10px;
@@ -100,7 +95,6 @@ body {
   margin: 0;
 }
 
-/* Стили для пунктов */
 .header__language-item {
   font-size: 16px;
   color: #7a7a7a;
@@ -108,17 +102,14 @@ body {
   transition: color 0.3s ease;
 }
 
-/* Активный язык */
 .header__language-item--active {
   color: #52bfff;
 }
 
-/* Ховер-эффект */
 .header__language-item:hover {
   color: #52bfff;
 }
 
-/* Кнопка */
 .header__actions {
   flex-shrink: 0;
 }
@@ -156,7 +147,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Общие стили хлебных крошек (navigation-path) */
+/* navigation-path */
 .navigation-path {
   background-color: white;
   padding: 10px 0;
@@ -203,24 +194,24 @@ body {
 
 /* О нас */
 .hero {
-  position: relative; /* Для позиционирования фона */
-  max-width: 1200px; /* Ограничиваем ширину секции */
-  margin: 0 auto; /* Центрируем секцию */
-  background-size: contain; /* Фон подстраивается по ширине */
-  padding: 50px 20px; /* Отступы внутри секции */
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-size: contain;
+  padding: 50px 20px;
 }
 
 .hero::after {
   content: "";
   position: absolute;
-  top: 66%; /* Начало фона с 2/3 секции */
+  top: 66%;
   left: 0;
   width: 100%;
-  height: 200%; /* Достаточная высота для охвата секции `services` */
+  height: 200%;
   background: url("../img/aboutus.img/white-cloud 1.svg") top center no-repeat;
-  background-size: cover; /* Растягиваем фон */
-  z-index: -1; /* Фон под контентом */
-  pointer-events: none; /* Фон не мешает взаимодействию с контентом */
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .hero__container {
@@ -242,7 +233,6 @@ body {
   line-height: 1.28;
 }
 
-/* Изображения */
 .hero__image-wrapper {
   width: 560px;
   height: 430px;
@@ -437,15 +427,15 @@ body {
 .contact::after {
   content: "";
   position: absolute;
-  bottom: 0; /* Размытость начинается снизу */
+  bottom: 0;
   left: -382px;
   width: 100%;
-  height: 206px; /* Высота размытия снизу */
+  height: 206px;
   background: linear-gradient(rgba(220, 220, 220, 0.1), rgba(220, 220, 220, 0)),
     url("../img/aboutus.img/verlauf.svg") bottom center no-repeat;
   background-size: cover;
-  pointer-events: none; /* Исключаем взаимодействие */
-  z-index: 2; /* Находится выше фона с Лондоном */
+  pointer-events: none;
+  z-index: 2;
   transform: scaleY(-1);
 }
 
@@ -456,10 +446,9 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  z-index: 3; /* Устанавливаем выше фонового изображения */
+  z-index: 3;
 }
 
-/* Изображение девушки */
 .contact__woman {
   position: absolute;
   bottom: 0;
@@ -468,7 +457,6 @@ body {
   width: 400px;
 }
 
-/* Картинка флага */
 .contact__flag {
   position: absolute;
   top: 20px;
@@ -477,7 +465,6 @@ body {
   width: 200px;
 }
 
-/* Правая часть секции */
 .contact__right {
   position: relative;
   width: 50%;
@@ -488,7 +475,6 @@ body {
   z-index: 3;
 }
 
-/* Заголовок */
 .contact__title {
   font-size: 28px;
   color: #7a7a7a;
@@ -496,7 +482,6 @@ body {
   text-align: center;
 }
 
-/* Подзаголовок */
 .contact__subtitle {
   font-size: 16px;
   color: #7a7a7a;
@@ -504,7 +489,6 @@ body {
   text-align: center;
 }
 
-/* Форма */
 .contact__form {
   display: flex;
   flex-direction: column;
@@ -516,7 +500,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Поля ввода */
 .contact__input,
 .contact__textarea {
   width: 100%;
@@ -546,30 +529,32 @@ body {
 .contact__button {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
   width: 220px;
   height: 50px;
-  padding: 10px 20px;
+  padding: 5px;
   background-color: #52bfff;
   color: white;
   font-size: 16px;
   font-weight: bold;
   border: none;
-  border-radius: 30px; /* Округленные края */
+  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: absolute;
-  bottom: -25px; /* Выглядит за рамку */
+  bottom: -25px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+  justify-content: start;
 }
 
-.contact__button-icon {
-  width: 20px;
-  height: 20px;
+.contact__button image {
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
+  margin: 0;
 }
 
 .contact__button:hover {
@@ -577,13 +562,14 @@ body {
   transform: translateX(-50%) scale(1.05);
 }
 
-/* Карандаш */
 .contact__pencil {
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: -30px;
-  z-index: 3;
-  width: 200px;
+  transform: rotate(15deg);
+  width: 290px;
+  height: auto;
+  z-index: 4;
 }
 
 /* Секция "Остались вопросы" */
@@ -596,11 +582,11 @@ body {
 
 .questions__container {
   max-width: 1200px;
-  min-height: 630px; /* Высота точно соответствует вашему макету */
+  min-height: 630px;
   margin: 0 auto;
   position: relative;
-  background: url("../img/service.img/map.png") top center no-repeat; /* Фон карты */
-  background-size: cover; /* Масштабируем фон */
+  background: url("../img/service.img/map.png") top center no-repeat;
+  background-size: cover;
 }
 
 .questions__container::before {
@@ -612,10 +598,9 @@ body {
   height: 100%;
   background: url("../img/service.img/map.png") top center no-repeat;
   background-size: cover;
-  z-index: -1; /* Поместите карту на задний фон */
+  z-index: -1;
 }
 
-/* Заголовки */
 .questions__header {
   text-align: center;
 }
@@ -632,46 +617,44 @@ body {
   margin-top: 10px;
 }
 
-/* Контент секции */
 .questions__content {
   display: flex;
-  justify-content: center; /* Разделяем элементы на всю ширину */
+  justify-content: center;
   align-items: center;
   gap: 20px;
   position: absolute;
   height: auto;
   width: 30%;
-  padding: 0 20px; /* Добавим отступы по бокам */
+  padding: 0 20px;
   margin-top: 69px;
   left: 40%;
   top: 20%;
 }
 
-/* Форма */
 .questions__form {
-  position: relative; /* Для кнопки с абсолютным позиционированием */
+  position: relative;
   background: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 367px;
-  height: 304px; /* Высота формы */
+  height: 304px;
   text-align: left;
   z-index: 1;
-  margin: 0 auto; /* Центрируем форму */
+  margin: 0 auto;
 }
 
 .questions__form::before {
   content: "";
   position: absolute;
-  top: 10px; /* Отступ для линии */
+  top: 10px;
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed #ecf6fc; /* Цвет и стиль линии */
-  border-radius: 12px; /* Совпадает с радиусом формы */
-  pointer-events: none; /* Исключаем взаимодействие с линией */
-  z-index: -1; /* Линия под формой */
+  border: 1px dashed #ecf6fc;
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .questions__info {
@@ -680,19 +663,19 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Отступы между элементами списка */
+  gap: 15px;
 }
 
 .questions__item {
   display: flex;
-  align-items: flex-start; /* Выравнивание иконки и текста */
+  align-items: flex-start;
   gap: 10px;
 }
 
 .questions__icon {
   width: 24px;
   height: 24px;
-  flex-shrink: 0; /* Фиксируем размер иконки */
+  flex-shrink: 0;
 }
 
 .questions__text {
@@ -733,22 +716,21 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  justify-content: start; /* Выравниваем содержимое кнопки влево */
+  justify-content: start;
 }
 
 .questions__button:hover {
   background-color: #0056b3;
-  transform: translateX(-50%) scale(1.05); /* Небольшой эффект увеличения при наведении */
+  transform: translateX(-50%) scale(1.05);
 }
 
 .questions__button img {
   width: 40px;
   height: 40px;
-  flex-shrink: 0; /* Убедимся, что размер иконки не будет уменьшаться */
-  margin: 0; /* Убираем любые другие отступы */
+  flex-shrink: 0;
+  margin: 0;
 }
 
-/* Изображения */
 .questions__tree {
   position: absolute;
   left: 0;
@@ -781,57 +763,55 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  height: 1px; /* Толщина линии */
-  border-top: 1px dashed #ecf6fc; /* Пунктирная линия */
+  height: 1px;
+  border-top: 1px dashed #ecf6fc;
   pointer-events: none;
 }
 
 .footer__container {
   display: grid;
-  grid-template-columns: 100px 1fr 200px; /* 3 столбца: узкий, растягивающийся, широкий */
-  grid-template-rows: auto auto; /* 2 строки */
-  gap: 20px; /* Расстояние между элементами */
-  max-width: 1200px; /* Ширина подвала */
-  margin: 0 auto; /* Центрируем */
+  grid-template-columns: 100px 1fr 200px;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-/* Первая строка */
 .footer__icon:first-of-type {
-  grid-column: 1 / 2; /* Первый столбец */
-  grid-row: 1 / 2; /* Первая строка */
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 .footer__nav {
-  grid-column: 2 / 3; /* Второй столбец */
-  grid-row: 1 / 2; /* Первая строка */
-  display: flex; /* Используем flexbox для горизонтального выравнивания */
-  justify-content: left; /* Центрируем пункты навигации */
-  align-items: center; /* Вертикальное выравнивание, если нужно */
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
 .footer__social {
-  grid-column: 3 / 4; /* Третий столбец */
-  grid-row: 1 / 2; /* Первая строка */
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
   display: flex;
-  justify-content: flex-end; /* Выравнивание соцсетей вправо */
-  gap: 10px; /* Расстояние между иконками */
+  justify-content: flex-end;
+  gap: 10px;
 }
 
-/* Вторая строка */
 .footer__icon:last-of-type {
-  grid-column: 1 / 2; /* Первый столбец */
-  grid-row: 2 / 3; /* Вторая строка */
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
 }
 
 .footer__contacts {
-  grid-column: 2 / 4; /* Объединение второго и третьего столбцов */
-  grid-row: 2 / 3; /* Вторая строка */
-  display: flex; /* Выстраиваем элементы в строку */
-  flex-wrap: wrap; /* Перенос элементов, если не помещаются */
-  gap: 20px; /* Отступы между контактами */
-  align-items: center; /* Центрируем элементы по вертикали */
-  justify-content: flex-start; /* Выравниваем элементы влево */
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .footer__contact-list {
@@ -840,16 +820,15 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Отступы между контактами */
+  gap: 10px;
 }
 
-/* Общие стили */
 .footer__menu {
-  display: flex; /* Делаем список горизонтальным */
-  gap: 15px; /* Расстояние между пунктами */
-  list-style: none; /* Убираем маркеры списка */
-  margin: 0; /* Убираем внешние отступы */
-  padding: 0; /* Убираем внутренние отступы */
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .footer__menu-item a {
   text-decoration: none;
@@ -859,11 +838,11 @@ body {
 }
 
 .footer__menu-item a:hover {
-  color: #52bfff; /* Цвет при наведении */
+  color: #52bfff;
 }
 
 .footer__icon img {
-  max-width: 100%; /* Корректируем размер иконок */
+  max-width: 100%;
 }
 .footer__city {
   color: #313131;
@@ -965,24 +944,24 @@ body {
   }
 
   .contact__flag {
-    display: none; /* Убираем флаг на маленьких экранах */
+    display: none;
   }
 
   .contact__pencil {
-    display: none; /* Убираем карандаш для упрощения */
+    display: none;
   }
 
   .footer__container {
-    grid-template-columns: 1fr; /* Все элементы в один столбец */
-    grid-template-rows: auto; /* Растягиваем строки */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     gap: 15px;
   }
 
   .footer__social {
-    justify-content: center; /* Выравниваем соцсети по центру */
+    justify-content: center;
   }
 
   .footer__contacts {
-    grid-column: 1 / 2; /* Располагаем контакты на всю ширину */
+    grid-column: 1 / 2;
   }
 }
