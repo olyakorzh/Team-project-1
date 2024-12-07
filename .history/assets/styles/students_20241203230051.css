@@ -25,7 +25,8 @@
     max-width: 1200px;
     margin: 0 auto;
   }
- 
+  
+  /* Шапка */
   .header {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -99,9 +100,6 @@
     gap: 5px 5px;
     align-items: center;
     width: 70%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    background-color:#fff
   }
   .block_foto{
     display: grid;

@@ -35,7 +35,6 @@
   .header__container {
     display: flex;
     align-items: center;
-    justify-content: center;
   }
   
   .header__logo {
@@ -99,9 +98,6 @@
     gap: 5px 5px;
     align-items: center;
     width: 70%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    background-color:#fff
   }
   .block_foto{
     display: grid;

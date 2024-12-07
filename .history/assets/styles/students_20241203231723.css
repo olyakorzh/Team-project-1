@@ -100,8 +100,7 @@
     align-items: center;
     width: 70%;
     margin-top: 1%;
-    margin-bottom: 1%;
-    background-color:#fff
+    margin-bottom: 2%;
   }
   .block_foto{
     display: grid;
