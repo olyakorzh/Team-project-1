@@ -189,7 +189,7 @@
     height: 30px;
     border: none;
     border-radius: 50%;
-    background-color: #52bfff
+    background-color: rgba(228, 58, 86, 0.6)
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -701,6 +701,11 @@ border-radius:50px;
 /* Адаптация */
 
 @media screen and (max-width: 2400px){
+  .basic{
+    display: flex;
+    width: 100%;
+  }
+
   .header__container {
     display: flex;
     justify-content: center;
@@ -752,6 +757,7 @@ border-radius:50px;
     font-size: 0.7em;
   }
 
+
   .header__language-item {
     font-size: 0.7em;
   }
@@ -767,121 +773,10 @@ border-radius:50px;
     justify-content: center;
   }
 
-  .navigation-path__container{
-    font-size: 0.7em;
-    max-width: 80%;
-  }
-
-  .containerstudent{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    background:#ffff
-  }
-  .block1{
-    display: flex;
-    text-align: left;
-  }
-  .block2{
-    display: flex;
-    width: 100%;
-    align-content: center;
-  }
-  .block3{
-    display: flex;
-    width: 100%;
-    font-size: 0.7em;
-  }
-
-  .contact {
-    background: radial-gradient(
-        ellipse at center,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.6) 100%
-      ),
-      url("../img/aboutus.img/contact_london.svg") bottom center no-repeat;
-  }
-
-  .contact__container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .contact__right {
-    width: 100%;
-  }
-
-  .contact__woman {
-    display: none;
-  }
-
-  .contact__flag {
-    display: none;
-  }
-
-  .contact__pencil {
-    display: none;
-  }
-
-.questions__bus{
-  display: none;
-}
-.questions__button {
-  bottom: -75px;
-}
-
-.questions__content {
-  height: 30%;
-  width: 50%;
-}
-
-.footer__container {
-  display: grid;
-  grid-template-columns: 80px 1fr 90px;
- font-size: 0.7em;
-}
-
-  .footer__social {
-    justify-content: center;
-  }
- 
-  .footer__menu-item{
-    font-size: 0.5em;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .menu__link {
-    font-size: 0.7em;
-  }
-
-  .header__language-item {
-    font-size: 0.7em;
-  }
-
-  .header__nav {
-    display: none;
-    gap: 20px;
-    list-style: none;
-  }
-
-  .menu{
-    display: none;
-  }
-
-  .header__button {
-    margin-top: 10px;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .navigation-path__container{
-    font-size: 0.7em;
-    max-width: 80%;
-  }
-
   .nav_burger{
-    display: flex;
+    border: none;
+    border-radius: 50%;
+    align-items: center;
     cursor: pointer; 
     display: flex;
     flex-direction: column;
@@ -891,11 +786,10 @@ border-radius:50px;
   }
 
   .nav_strip{
-    display: flex;
-    background-color: #333;
+    background-color: #52bfff;
     height: 4px;
     width: 100%;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease
   }
 
   .containerstudent{
@@ -938,7 +832,11 @@ border-radius:50px;
   }
 
   .contact__woman {
-    display: none;
+    position: relative;
+    bottom: unset;
+    left: unset;
+    width: 200px;
+    margin: 20px auto;
   }
 
   .contact__flag {
@@ -949,29 +847,134 @@ border-radius:50px;
     display: none;
   }
 
-.questions__bus{
-  display: none;
-}
-.questions__button {
-  bottom: -75px;
-}
-
-.questions__content {
-  height: 30%;
-  width: 50%;
-}
-
-.footer__container {
-  display: grid;
-  grid-template-columns: 10% 1fr 90px;
- font-size: 0.7em;
-}
+  .footer__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+  }
 
   .footer__social {
     justify-content: center;
   }
- 
-  .footer__menu-item{
-    font-size: 0.5em;
+
+  .footer__contacts {
+    grid-column: 1 / 2;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .basic{
+    display: flex;
+    width: 100%;
+  }
+  .menu__link {
+    font-size: 0.7em;
+  }
+
+.header__nav{
+  display: none;
+}
+
+  .header__language-item {
+    font-size: 0.7em;
+  }
+
+  .header__container {
+    display:flex;
+    flex-wrap: wrap;
+  }
+
+  .header__button {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav_burger{
+    border: none;
+    border-radius: 50%;
+    align-items: center;
+    cursor: pointer; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+  }
+
+  .nav_strip{
+    background-color: #52bfff;
+    height: 4px;
+    width: 100%;
+    transition: all 0.3s ease
+  }
+
+  .containerstudent{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background:#ffff
+  }
+  .block1{
+    display: flex;
+    text-align: left;
+  }
+  .block2{
+    display: flex;
+    width: 100%;
+    align-content: center;
+  }
+  .block3{
+    display: flex;
+    width: 100%;
+    font-size: 0.7em;
+  }
+
+  .contact {
+    background: radial-gradient(
+        ellipse at center,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.6) 100%
+      ),
+      url("../img/aboutus.img/contact_london.svg") bottom center no-repeat;
+  }
+
+  .contact__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact__right {
+    width: 100%;
+  }
+
+  .contact__woman {
+    position: relative;
+    bottom: unset;
+    left: unset;
+    width: 200px;
+    margin: 20px auto;
+  }
+
+  .contact__flag {
+    display: none;
+  }
+
+  .contact__pencil {
+    display: none;
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+  }
+
+  .footer__social {
+    justify-content: center;
+  }
+
+  .footer__contacts {
+    grid-column: 1 / 2;
   }
 }

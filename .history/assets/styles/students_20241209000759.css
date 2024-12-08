@@ -851,6 +851,10 @@ border-radius:50px;
 }
 
 @media screen and (max-width: 375px) {
+  .basic{
+    display: flex;
+    width: 100%;
+  }
   .menu__link {
     font-size: 0.7em;
   }
@@ -859,14 +863,9 @@ border-radius:50px;
     font-size: 0.7em;
   }
 
-  .header__nav {
-    display: none;
-    gap: 20px;
-    list-style: none;
-  }
-
-  .menu{
-    display: none;
+  .header__container {
+    display:flex;
+    flex-wrap: wrap;
   }
 
   .header__button {
@@ -882,20 +881,20 @@ border-radius:50px;
 
   .nav_burger{
     display: flex;
-    cursor: pointer; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     width: 30px;
-    height: 25px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #52bfff
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .nav_strip{
-    display: flex;
-    background-color: #333;
+    background-color: #52bfff;
     height: 4px;
     width: 100%;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
   }
 
   .containerstudent{

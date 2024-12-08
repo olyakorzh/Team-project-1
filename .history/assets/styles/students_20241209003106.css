@@ -881,7 +881,6 @@ border-radius:50px;
   }
 
   .nav_burger{
-    display: flex;
     cursor: pointer; 
     display: flex;
     flex-direction: column;
@@ -891,10 +890,9 @@ border-radius:50px;
   }
 
   .nav_strip{
-    display: flex;
-    background-color: #333;
-    height: 4px;
-    width: 100%;
+    background-color: #333; /* Цвет линий */
+    height: 4px; /* Толщина линий */
+    width: 100%; /* Ширина линий равна ширине кнопки */
     transition: all 0.3s ease; 
   }
 

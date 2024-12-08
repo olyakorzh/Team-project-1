@@ -189,7 +189,7 @@
     height: 30px;
     border: none;
     border-radius: 50%;
-    background-color: #52bfff
+    background-color: rgba(228, 58, 86, 0.6)
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -701,6 +701,11 @@ border-radius:50px;
 /* Адаптация */
 
 @media screen and (max-width: 2400px){
+  .basic{
+    display: flex;
+    width: 100%;
+  }
+
   .header__container {
     display: flex;
     justify-content: center;
@@ -848,9 +853,14 @@ border-radius:50px;
   .footer__menu-item{
     font-size: 0.5em;
   }
+
 }
 
 @media screen and (max-width: 375px) {
+  .basic{
+    display: flex;
+    width: 100%;
+  }
   .menu__link {
     font-size: 0.7em;
   }
@@ -859,15 +869,9 @@ border-radius:50px;
     font-size: 0.7em;
   }
 
-  .header__nav {
-    display: none;
-    gap: 20px;
-    list-style: none;
-  }
-
-  .menu{
-    display: none;
-  }
+.menu{
+  display: none;
+}
 
   .header__button {
     margin-top: 10px;
@@ -881,21 +885,15 @@ border-radius:50px;
   }
 
   .nav_burger{
-    display: flex;
-    cursor: pointer; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: fl;
     width: 30px;
-    height: 25px;
-  }
-
-  .nav_strip{
-    display: flex;
-    background-color: #333;
-    height: 4px;
-    width: 100%;
-    transition: all 0.3s ease; 
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(228, 58, 86, 0.6)
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .containerstudent{
@@ -963,7 +961,7 @@ border-radius:50px;
 
 .footer__container {
   display: grid;
-  grid-template-columns: 10% 1fr 90px;
+  grid-template-columns: 80px 1fr 90px;
  font-size: 0.7em;
 }
 
@@ -974,4 +972,5 @@ border-radius:50px;
   .footer__menu-item{
     font-size: 0.5em;
   }
+
 }
